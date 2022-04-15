@@ -12,6 +12,8 @@ const PluginValidator = require('seneca-plugin-validator')
 
 const Shared = require('./shared')
 
+const { Maintain } = require('@seneca/maintain')
+
 lab.test('validate', PluginValidator(Plugin, module))
 
 lab.test('happy', async () => {
@@ -105,3 +107,5 @@ lab.test('handle-sanitize', async () => {
   expect(sanitize('alice.anderson')).equal('alice_anderson')
 })
 */
+
+Maintain()
